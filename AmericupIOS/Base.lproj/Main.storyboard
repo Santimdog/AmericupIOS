@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detectar código de barras-->
+        <scene sceneID="CQE-Q4-6p1">
+            <objects>
+                <viewController id="Cxg-2g-PnC" customClass="BarcodeViewController" customModule="AmericupIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BhA-zA-IvM" customClass="b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="qr_icon" translatesAutoresizingMaskIntoConstraints="NO" id="CZQ-dn-lO7">
+                                <rect key="frame" x="74" y="148" width="267" height="211"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="XPq-P0-o02"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detectar código de barras" id="W9G-Ew-AbN">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="oIY-hf-ycV">
+                            <connections>
+                                <action selector="touchCancel:" destination="Cxg-2g-PnC" id="LmF-pn-mkB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AcA-ku-fL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3271.0144927536235" y="666.96428571428567"/>
+        </scene>
+        <!--Matches Table View Controller-->
+        <scene sceneID="bT5-e4-8Es">
+            <objects>
+                <tableViewController id="y2t-KK-dQ7" customClass="MatchesTableViewController" customModule="AmericupIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IsD-5r-MVJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="z4Y-Yp-G9K">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z4Y-Yp-G9K" id="3XT-nh-fum">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="y2t-KK-dQ7" id="Kb0-4M-HkK"/>
+                            <outlet property="delegate" destination="y2t-KK-dQ7" id="yMl-QG-MgX"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qTQ-7K-wo5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2699" y="-33"/>
+        </scene>
+        <!--Menú principal-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AmericupIOS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVh-TS-Uhr">
+                                <rect key="frame" x="105" y="144" width="205" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Tabla de enfrentamientos"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7FZ-Wh-Aaw">
+                                <rect key="frame" x="105" y="197" width="205" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Marcadores guardados"/>
+                                <connections>
+                                    <segue destination="y2t-KK-dQ7" kind="show" id="dKC-FK-cOf"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="copabrasil" translatesAutoresizingMaskIntoConstraints="NO" id="rtJ-YA-cFp">
+                                <rect key="frame" x="87" y="600" width="240" height="252"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3f-de-aqe">
+                                <rect key="frame" x="105" y="251" width="194" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Buscar jugador por QR"/>
+                                <connections>
+                                    <segue destination="CtM-6Y-XUx" kind="popoverPresentation" popoverAnchorView="m3f-de-aqe" id="tRS-Cn-rnc">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lLa-EY-mG0" userLabel="scanTextField">
+                                <rect key="frame" x="39" y="488" width="326" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lLa-EY-mG0" secondAttribute="trailing" constant="49" id="0Yd-0c-G23"/>
+                            <constraint firstItem="7FZ-Wh-Aaw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="105" id="0ak-Fb-KEw"/>
+                            <constraint firstItem="OVh-TS-Uhr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="105" id="1pI-yU-wQx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rtJ-YA-cFp" secondAttribute="bottom" constant="10" id="1v6-1q-1r9"/>
+                            <constraint firstItem="lLa-EY-mG0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="9ud-qS-bdx"/>
+                            <constraint firstItem="m3f-de-aqe" firstAttribute="top" secondItem="7FZ-Wh-Aaw" secondAttribute="bottom" constant="20" id="IVn-WO-ndY"/>
+                            <constraint firstItem="lLa-EY-mG0" firstAttribute="top" secondItem="m3f-de-aqe" secondAttribute="bottom" constant="203" id="IXp-hA-qE9"/>
+                            <constraint firstItem="7FZ-Wh-Aaw" firstAttribute="top" secondItem="OVh-TS-Uhr" secondAttribute="bottom" constant="20" id="NQZ-w7-IoT"/>
+                            <constraint firstItem="rtJ-YA-cFp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="PsW-6e-ca3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7FZ-Wh-Aaw" secondAttribute="trailing" constant="104" id="WEh-lm-Imi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rtJ-YA-cFp" secondAttribute="trailing" priority="800" constant="87" id="XSn-p4-9yV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="m3f-de-aqe" secondAttribute="trailing" constant="115" id="bE1-b7-SOO"/>
+                            <constraint firstItem="rtJ-YA-cFp" firstAttribute="top" secondItem="lLa-EY-mG0" secondAttribute="bottom" constant="82" id="h3I-ic-Hhe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OVh-TS-Uhr" secondAttribute="trailing" constant="104" id="o6O-mg-0cc"/>
+                            <constraint firstItem="OVh-TS-Uhr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="pkU-Ob-CzM"/>
+                            <constraint firstItem="m3f-de-aqe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="105" id="vCj-Cf-rg0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Menú principal" id="qGA-n1-rFv">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="LIO-Uq-sGp"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="scanTextField" destination="lLa-EY-mG0" id="0wc-BR-HHp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1818.840579710145" y="20.758928571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZWk-8I-g7v">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CtM-6Y-XUx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yrM-QK-nIc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Cxg-2g-PnC" kind="relationship" relationship="rootViewController" id="4f4-Py-ych"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aCy-GV-FwW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2360.8695652173915" y="666.96428571428567"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="copabrasil" width="220" height="222"/>
+        <image name="qr_icon" width="230" height="230"/>
+    </resources>
+</document>
