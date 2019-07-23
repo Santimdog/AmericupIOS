@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FBA3C4CF22E6C593006B5A14 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA3C4CE22E6C593006B5A14 /* MatchViewController.swift */; };
+		FBA3C4D122E6DDBF006B5A14 /* matches.db in Resources */ = {isa = PBXBuildFile; fileRef = FBA3C4D022E6DDBF006B5A14 /* matches.db */; };
+		FBA3C4D322E6DF5A006B5A14 /* GroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA3C4D222E6DF5A006B5A14 /* GroupsTableViewController.swift */; };
+		FBA3C4D522E6DF90006B5A14 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA3C4D422E6DF90006B5A14 /* GroupCell.swift */; };
+		FBA3C4D722E6E189006B5A14 /* Gmatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA3C4D622E6E189006B5A14 /* Gmatch.swift */; };
+		FBA3C4D922E6E1D9006B5A14 /* GmatchesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA3C4D822E6E1D9006B5A14 /* GmatchesManager.swift */; };
 		FBA85E3522E3B93C00ADA217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA85E3422E3B93C00ADA217 /* AppDelegate.swift */; };
 		FBA85E3A22E3B93C00ADA217 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBA85E3822E3B93C00ADA217 /* Main.storyboard */; };
 		FBA85E3C22E3B94800ADA217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBA85E3B22E3B94800ADA217 /* Assets.xcassets */; };
@@ -39,6 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FBA3C4CE22E6C593006B5A14 /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
+		FBA3C4D022E6DDBF006B5A14 /* matches.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = matches.db; path = ../../../../Downloads/matches.db; sourceTree = "<group>"; };
+		FBA3C4D222E6DF5A006B5A14 /* GroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableViewController.swift; sourceTree = "<group>"; };
+		FBA3C4D422E6DF90006B5A14 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
+		FBA3C4D622E6E189006B5A14 /* Gmatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gmatch.swift; sourceTree = "<group>"; };
+		FBA3C4D822E6E1D9006B5A14 /* GmatchesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmatchesManager.swift; sourceTree = "<group>"; };
 		FBA85E3122E3B93C00ADA217 /* AmericupIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmericupIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA85E3422E3B93C00ADA217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBA85E3922E3B93C00ADA217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,6 +119,7 @@
 		FBA85E3322E3B93C00ADA217 /* AmericupIOS */ = {
 			isa = PBXGroup;
 			children = (
+				FBA3C4D022E6DDBF006B5A14 /* matches.db */,
 				FBA85E3422E3B93C00ADA217 /* AppDelegate.swift */,
 				FBA85E3822E3B93C00ADA217 /* Main.storyboard */,
 				FBA85E3B22E3B94800ADA217 /* Assets.xcassets */,
@@ -118,6 +131,11 @@
 				FBD0750E22E51A3400993467 /* ViewController.swift */,
 				FBD0751222E53BC800993467 /* MatchesTableViewController.swift */,
 				FBD0751422E5436900993467 /* BarcodeViewController.swift */,
+				FBA3C4CE22E6C593006B5A14 /* MatchViewController.swift */,
+				FBA3C4D222E6DF5A006B5A14 /* GroupsTableViewController.swift */,
+				FBA3C4D422E6DF90006B5A14 /* GroupCell.swift */,
+				FBA3C4D622E6E189006B5A14 /* Gmatch.swift */,
+				FBA3C4D822E6E1D9006B5A14 /* GmatchesManager.swift */,
 			);
 			path = AmericupIOS;
 			sourceTree = "<group>";
@@ -247,6 +265,7 @@
 				FBA85E3F22E3B94800ADA217 /* LaunchScreen.storyboard in Resources */,
 				FBA85E3C22E3B94800ADA217 /* Assets.xcassets in Resources */,
 				FBA85E3A22E3B93C00ADA217 /* Main.storyboard in Resources */,
+				FBA3C4D122E6DDBF006B5A14 /* matches.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,10 +290,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBA3C4CF22E6C593006B5A14 /* MatchViewController.swift in Sources */,
 				FBD0750F22E51A3400993467 /* ViewController.swift in Sources */,
+				FBA3C4D322E6DF5A006B5A14 /* GroupsTableViewController.swift in Sources */,
 				FBA85E3522E3B93C00ADA217 /* AppDelegate.swift in Sources */,
 				FBA85E6722E3CDA600ADA217 /* CustomCell.swift in Sources */,
+				FBA3C4D522E6DF90006B5A14 /* GroupCell.swift in Sources */,
 				FBD0751322E53BC800993467 /* MatchesTableViewController.swift in Sources */,
+				FBA3C4D922E6E1D9006B5A14 /* GmatchesManager.swift in Sources */,
+				FBA3C4D722E6E189006B5A14 /* Gmatch.swift in Sources */,
 				FBA85E6322E3C47500ADA217 /* Match.swift in Sources */,
 				FBA85E6522E3C71000ADA217 /* MatchesManager.swift in Sources */,
 				FBD0751522E5436900993467 /* BarcodeViewController.swift in Sources */,

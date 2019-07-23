@@ -1,53 +1,53 @@
+//
+//  GmatchesManager.swift
+//  AmericupIOS
+//
+//  Created by German Rivera P on 7/23/19.
+//  Copyright © 2019 Santiago Muñoz. All rights reserved.
+//
 
-//
-//  MatchesManager.swift
-//  Americup
-//
-//  Created by Enfasis on 7/13/19.
-//  Copyright © 2019 Santiago. All rights reserved.
-//
 
 import Foundation
 import UIKit
 
 //Class to handle operations over the books collection
-class MatchesManager {
+class GmatchesManager {
     
     //Store the books collection
-    private lazy var matches:[Match] = self.loadMatches()
+    private lazy var gmatches:[Gmatch] = self.loadGmatches()
     //Store the number of books in the collection
-    var matchCount:Int {return matches.count}
+    var gmatchCount:Int {return gmatches.count}
     
     //Get a book from the collection at a specific position
-    func getMatch(at index:Int)->Match {
-        return matches[index]
+    func getGmatch(at index:Int)->Gmatch {
+        return gmatches[index]
     }
     
     //Return the books collection
-    private func loadMatches()->[Match] {
+    private func loadGmatches()->[Gmatch] {
         //for now, loads a dummy hard-coded books collection
-        return sampleMatches()
+        return sampleGmatches()
     }
     
     //Add a book to the collection
-    func addMatch(_ match:Match) {
-        matches.append(match)
+    func addGmatch(_ gmatch:Gmatch) {
+        gmatches.append(gmatch)
     }
     
-    func updateMatch(at index: Int, with match: Match) {
+    /*func updateGmatch(at index: Int, with match: Match) {
         matches[index] = match
-    }
+    }*/
     
     func removeMatch(at index: Int) {
-        matches.remove(at: index)
+        gmatches.remove(at: index)
     }
     
     //Return a dummny collection of books according to Book structure
-    private func sampleMatches()->[Match] {
+    private func sampleGmatches()->[Gmatch] {
         return [
-            Match(equipo1: "Colombia", equipo2: "Bra", score1: "2", score2: "4"),
-            Match(equipo1: "Chi", equipo2: "Qat", score1: "1", score2: "0"),
-            Match(equipo1: "Col", equipo2: "Bra", score1: "2", score2: "4"),
+            Gmatch(equipo1: "Colombia", equipo2: "Bra"),
+            Gmatch(equipo1: "Chi", equipo2: "Qat"),
+            Gmatch(equipo1: "Col", equipo2: "Bra"),
             //More items
         ]
     }

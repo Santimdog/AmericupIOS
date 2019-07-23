@@ -10,7 +10,7 @@ import UIKit
 
 class BarcodeViewController: UIViewController {
     @IBAction func touchCancel(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
+        dismissMe()
     }
      var delegate:BarcodeViewControllerDelegate?
     
@@ -34,6 +34,17 @@ class BarcodeViewController: UIViewController {
     }
     */
 
+    func dismissMe() {
+        /*The property presentingViewController property will contain a value
+         if the view controller was presented via a modal segue*/
+        if presentingViewController != nil {
+            // was presented via modal segue
+            dismiss(animated: true, completion: nil)
+        } else {
+            // was pushed onto navigation stack
+            navigationController!.popViewController(animated: true)
+        }
+    }
 }
 protocol BarcodeViewControllerDelegate {
     func foundBarcode(barcode:String)
